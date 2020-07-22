@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+  }
+   
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+   
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;
+    font-weight: bold;
+    font-family: 'Rowdies', cursive;
+  }
+   
+  body {
+    background-color: thistle;
+    padding: 1em;
+  }
+   
+  #photo-gallery {
+    background: teal;
+    margin: 0 auto;
+    max-width: 928px;
+  }
+   
+  #photo-gallery:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+   
+  .creature h3 {
+    text-align: center;
+    margin: 0.25em;
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+   
+  .creature p {
+    text-align: center;
+    margin: 0.25em;
+  }
+
+  header {
+      width: 928px;
+      margin: 0 auto;
+  }

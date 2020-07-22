@@ -6,9 +6,9 @@ Estimate of time needed to complete: 1.5 hours
 
 Start time: 10:45am
 
-Finish time: 
+Finish time: 11:52
 
-Actual time needed to complete: 
+Actual time needed to complete: 1 hour 7 minutes
 
 
 
@@ -26,10 +26,10 @@ Actual time needed to complete:
 
 Number and name of feature: Feature #3: Style the application
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 45 minutes
 
-Start time: 
+Start time: 1:20
 
-Finish time: 
+Finish time: 1:55 pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 35 minutes
