@@ -3,5 +3,9 @@
     padding: 1em;
     margin: 1em;
     background-color: whitesmoke;
-    float: left;
+  }
+
+  #photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
   }

@@ -11,26 +11,46 @@ $(() => {
     })
     .then(() => {
       renderCreature();
+      createOptions();
+      handleFilter();
     });
 });
 
 function Creature(creature) {
   this.imgUrl = creature.image_url;
   this.getTitle = creature.title;
+  this.getDescription = creature.description;
 }
 
 Creature.all = [];
+Creature.allKeywords = [];
 
 Creature.prototype.render = function () {
-  let $template = $('.photo-template').clone();
-  $template.removeClass('photo-template');
-  $template.find('.title').text(this.getTitle);
-  $template.find('.creatureImage').attr('src', this.imgUrl);
-  $template.find('.creatureImage').attr('alt', this.getTitle);
-  return $template;
+  const templateHTML = $('#photo-template').html();
+  const renderedHTML = Mustache.render(templateHTML, this);
+  return renderedHTML;
 };
 
 function renderCreature() {
   Creature.all.forEach(creature => $('#photo-gallery').append(creature.render()));
   $('.photo-template').remove();
+}
+
+function createOptions() {
+  Creature.allKeywords.sort();
+  Creature.allKeywords.forEach(keyword => {
+    const $option = $('<option>').text(keyword.charAt(0).toUpperCase() + keyword.slice(1)).attr('value', keyword);
+    $('#selector').append($option);
+  });
+}
+
+function handleFilter() {
+  $('#selector').on('change', function() {
+    if($(this).val() !== 'default') {
+      $('.creature').hide();
+      $(`.creature[keyword*="${$(this).val()}"]`).fadeIn();
+    } else {
+      $('.creature').fadeIn();
+    }
+  });
 }
